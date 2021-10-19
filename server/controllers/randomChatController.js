@@ -103,10 +103,6 @@ class randomChatController{
     }
 }
 
-const findNewPeers = (socket) => {
-
-}
-
 module.exports = (socket) => {
     new randomChatController(socket)
 }
