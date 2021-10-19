@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="assets/lib/js/jquery.js"></script>
+    <link href="assets/lib/css/tailwind.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Document</title>
+</head>
+<body class="bg-gray-800">
+    <div class="grid justify-items-center w-full max-h-full" >
+        <div class="bg-white-coce h-screen main_container">
+
+            <div class="flex flex-col items-center justify-center h-screen" id="set_username_container">
+                <div class="text-center">
+                    <div><input type="text" class="p-2 outline-none" id="username" placeholder="tulis username"></div>
+                    <div><input type="submit" class="p-2 pr-5 pl-5" value="Go" id="submit-btn"></div>
+                    
+                    <span id="error"></span>
+                </div>
+            </div>
+        <div class="flex flex-col items-center justify-center h-screen" id="welcome_container">
+            <div><img id="myProfilePicture" width='50px' /></div>
+            <div><span id="usernameWelcome" class="text-2xl bold"></span></div>
+            <button id="findSomeone">Cari Orang</button>
+        </div>
+        <div class="flex flex-col items-center justify-center h-screen" id="wating_room">
+            <div class="text-center">
+                <h1>Searching someone....</h1>
+                <h1>Please Wait</h1>
+            </div>
+        </div>
+        <div id="chat_room">
+            <div class="flex pl-2 pr-0 border-b-2 border-gray-200 bg-white-coce" id="stranger">
+                <div class="flex w-1/2 items-center">
+                    <img src="https://avatars.dicebear.com/api/human/asw.svg" class="pr-3" alt="" id="stranger_img" width="50px">
+                    <div>
+                        <div>you are chatting with</div>
+                        <div id="stranger_username" class="text-black font-bold">yhhh</div>
+                    </div>
+                </div>
+                <div class="w-1/2 flex justify-center">
+                        <button class="h-full w-1/2 text-red-500 hover:text-white hover:bg-red-500" id="stop">stop</button>
+                        <button class="h-full w-1/2 text-yellow-300 hover:text-white hover:bg-yellow-300" id="skip">skip</button>
+                </div>
+
+            </div>
+            <div class="container coce h-auto bottomtopvisible">
+                <div id="chat_container">
+                </div>
+            </div>
+            <div id="send_msg_tab">
+                <div class="h-full w-4/5 bg-white-coce" style="max-width:400px;" contenteditable="true" id="pesan" class="center" placeholder="Tulis bacotan anda">
+                </div>
+                <div class="flex h-full w-1/5 bg-white-coce justify-center">
+                    <button class="h-full w-full send-button">send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="assets/js/main.js"></script>
+</html>
